@@ -9,7 +9,7 @@
 
 ### How does it work?
 
-    Programming Patty is a multiple choice trivia game that focuses on topics learned from week 1.
+    Coding Critters is a multiple choice trivia game that focuses on topics learned from week 1.
     Throughout the game we will be guided by our very own mascott, Patty the Panda.
 
 ### Dynamics:
