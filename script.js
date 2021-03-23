@@ -17,9 +17,6 @@ const switchToMap = () => {
     return
 }
 
-const mapToggle = document.querySelector("#mapToggle")
-mapToggle.addEventListener('click', switchToMap)
-
 //PAGES
 const mapScreen = document.querySelector(".map")
 const startScreen = document.querySelector(".startScreen")
@@ -32,12 +29,6 @@ const rightAnswer = document.querySelector(".rightAnswer")
 const wrongAnswer = document.querySelectorAll(".wrongAnswer")
 const clock = document.querySelector('.clock')
 
-const retry = document.querySelector('#retry')
-retry.addEventListener('click', () => {
-    location.reload()
-})
-
-
 //AudioStuff?
 
 
@@ -49,9 +40,7 @@ const rocky = document.querySelector('#rocky')
 const bear = document.querySelector('#bear')
 const pig = document.querySelector('#pig')
 
-var animals = [hippo, cat, rocky, bear, pig]
-console.log(animals)
-
+let animals = [hippo, cat, rocky, bear, pig]
 
 //behavior after selecting NPC
 const switchToQuiz1 = () => {
@@ -65,7 +54,6 @@ const switchToQuiz1 = () => {
     let answersQuiz1 = document.querySelectorAll('.quizScreen1 .playerOptions .answer')
     let rightAnswerMessage1 = document.querySelector('.quizScreen1 .rightAnswer')
     let wrongAnswerMessage1 = document.querySelector('.quizScreen1 .wrongAnswer')
-    // console.log(answersQuiz1)
     nextStep(answersQuiz1, rightAnswerMessage1, wrongAnswerMessage1, hippo)
     return
 }
@@ -167,8 +155,6 @@ const nextStep = (answers, message, wrong, bye) => {
                 for (let i = 0; i < animals.length; i++) {
                     if (animals[i] === bye) {
                         animals.splice(i, 1)
-                        // console.log(animals)
-                        // console.log('LENGTH: ',animals.length)
                     }
                 }
                 setTimeout(() => {
@@ -191,92 +177,25 @@ const timer = () => {
     let counter = 20;
     let interval = setInterval(function() {
         document.querySelector('.countTimer').innerHTML = counter
-        console.log(document.querySelector('.countTimer').innerHTML)
-        console.log(animals)
         counter--;
         if (counter === 0) {
             clearInterval(interval)
-            // alert('timesUp')
             Swal.fire({
-                // icon: 'error',
-                title: 'Times up!',
+                title: 'Uh-Oh! You ran out of time!',
                 confirmButtonText: 'Try Again!', //got help from @jennster from twitter
             }).then(function() {
                     location.reload();
-                }
-                // location.reload()          
+                }       
             )
         } else if (counter > 0 && animals.length === 0) {
             Swal.fire({
-                // icon: 'succes',
-                title: 'Congrajulayshuns!',
+                title: 'Good Job!',
                 confirmButtonText: 'Play Again!', //got help from @jennster from twitter
-
             }).then(function() {
                     location.reload();
-                }
-                // location.reload()          
+                }      
             )
             clearInterval(interval)
-            // location.reload()
-
         }
     }, 1000)
-
 }
-
-
-
-
-// }
-
-
-// -
-
-
-// const go2rightAnswer = () => {
-
-//     for (let i = 0; i < rightElements.length; i++) {
-//         if (rightElements[i].classList.contains('correct')){
-//             console.log('line 178')
-//             rightAnswer.classList.remove('inactive')
-//         }
-//         else {wrongAnswer.classList.remove('inactive')
-//         console.log('182')
-//     }
-//     }
-// }
-// yesAnswer.addEventListener('click', () => {
-//     go2rightAnswer()
-// })
-// const go2wrongAnswer = () => {
-//     let rightElements = document.querySelectorAll('.rightAnswer')
-//     let wrongElements = document.querySelectorAll('.wrongAnswer')
-//     for (let i = 0; i < wrongElements.length; i++) {
-//         // rightElements[i].classList.add('inactive')
-//         wrongElements[i].classList.remove('inactive')
-//     }
-// }
-
-// const yesAnswer = document.querySelectorAll('.correct')
-// yesAnswer.addEventListener('click', () => {
-//     go2rightAnswer()
-// })
-
-// const noAnswer = document.querySelectorAll('.wrong')
-// noAnswer.addEventListener('click', () => {
-//     go2wrongAnswer()
-// })
-
-
-//What it do when good answer go click click
-
-// const playerOptions = document.querySelector('.q1playerOptions')
-// playerOptions.addEventListener("click", () => {
-//     for (let i = 1; i < 5; i++) {
-//         if (document.getElementById(`q1answer${i}`).className === 'correct'){
-//             console.log('correct')
-//         } else {
-//             console.log('wrong')
-//         }
-//     }

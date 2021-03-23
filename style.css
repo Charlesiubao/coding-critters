@@ -11,11 +11,6 @@ body {
     background-attachment: fixed;
 }
 
-#instruct {
-    height: 80%;
-    width: 80%;
-}
-
 .container {
     margin-top: 50px;
     display: flex;
@@ -229,70 +224,12 @@ p {
     border-radius: 25px;
 }
 
-.quizScreen1 {
+.quiz {
     display: flex;
     flex-direction: column;
     width: 100%;
     height:100%;
     background-image: url(assets/images/littleBackground.jpg);
-    background-repeat: no-repeat;
-    /* background-size: 100%; */
-    background-repeat: no-repeat;
-    border-radius: 25px;
-    flex-wrap: wrap;
-    animation: fade 3s;
-}
-
-.quizScreen2 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height:100%;
-    background-image: url(assets/images/littleBackground.jpg);
-    background-repeat: no-repeat;
-    /* background-size: 100%; */
-    background-repeat: no-repeat;
-    border-radius: 25px;
-    flex-wrap: wrap;
-    animation: fade 3s;
-}
-
-.quizScreen3 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height:100%;
-    background-image: url(assets/images/littleBackground.jpg);
-    background-repeat: no-repeat;
-    /* background-size: 100%; */
-    background-repeat: no-repeat;
-    border-radius: 25px;
-    flex-wrap: wrap;
-    animation: fade 3s;
-}
-
-.quizScreen4 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height:100%;
-    background-image: url(assets/images/littleBackground.jpg);
-    background-repeat: no-repeat;
-    /* background-size: 100%; */
-    background-repeat: no-repeat;
-    border-radius: 25px;
-    flex-wrap: wrap;
-    animation: fade 3s;
-}
-
-.quizScreen5 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height:100%;
-    background-image: url(assets/images/littleBackground.jpg);
-    background-repeat: no-repeat;
-    /* background-size: 100%; */
     background-repeat: no-repeat;
     border-radius: 25px;
     flex-wrap: wrap;
@@ -303,59 +240,46 @@ p {
     font-weight: bold;
 }
 
-.npcIcon1 {
+.npcIcon {
     position: absolute;
-    margin-top: 150px;
-    margin-left: 750px;
     width: 500px;
-    height: 300px;
-    background-image: url(assets/images/hippo.png);
     background-repeat: no-repeat;
     background-size: 50%;
+}
+
+.npcIcon1 {
+    margin-top: 150px;
+    margin-left: 750px;
+    height: 300px;
+    background-image: url(assets/images/hippo.png);
 }
 
 .npcIcon2 {
-    position: absolute;
     margin-top: 150px;
     margin-left: 750px;
-    width: 500px;
     height: 300px;
     background-image: url(assets/images/cat.png);
-    background-repeat: no-repeat;
-    background-size: 50%;
 }
 
 .npcIcon3 {
-    position: absolute;
     margin-top: 200px;
     margin-left: 700px;
-    width: 500px;
     height: 300px;
     background-image: url(assets/images/rocky.png);
-    background-repeat: no-repeat;
-    background-size: 50%;
 }
 
 .npcIcon4 {
-    position: absolute;
     margin-top: 140px;
     margin-left: 700px;
-    width: 500px;
     height: 310px;
     background-image: url(assets/images/bear.png);
-    background-repeat: no-repeat;
-    background-size: 50%;
 }
 
 .npcIcon5 {
-    position: absolute;
     margin-top: 180px;
     margin-left: 700px;
-    width: 500px;
     height: 300px;
     background-image: url(assets/images/pig.png);
-    background-repeat: no-repeat;
-    background-size: 50%;
 }
 
 .host {
@@ -417,56 +341,7 @@ p {
     transform: scale(1);
 }
 
-.toggle {
-    margin-top: 20px;
-    filter: drop-shadow(3px 10px 15px rgba(0, 0, 0, 0.45));
-}
-
-.toggle button {
-    height: 50px;
-    width: 100px;
-    background-color: rgba(173, 255, 182, 0.316);
-    font-family: freude,sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #005AFF;
-    font-size: 18px;
-    border: none;
-    margin: -2px; 
-    padding: 0;
-    stroke: black;
-    outline: none;
-    border: 4px solid #ffa500;
-}
-
-.toggle :nth-child(1) {
-    border-radius: 20px 0 0 20px;
-    border-right: none;
-}
-
-/* .toggle :nth-child(2) {
-    border-left: none;
-    border-right: none;
-} */
-
-.toggle :nth-child(2){
-    border-left: none;
-    border-radius: 0 20px 20px 0;
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: #4e93ed;
-    filter: drop-shadow(3px 5px 5px rgba(0, 0, 0, 0.45));
-    transform: scale(1.2);
-}
-
-button:active {
-filter: none;
-transform: scale(.95);
-}
-
-.rightAnswer {
+.answerBox {
     height: 90px;
     width: auto;
     position: absolute;
@@ -479,21 +354,6 @@ transform: scale(.95);
     border: 5px solid orange;
     border-radius: 20px;
     background-color: #adffb651;
-}
-
-.wrongAnswer {
-    height: 90px;
-    width: auto;
-    position: absolute;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 300px;
-    margin-left: 500px;
-    border: 5px solid #ffa500;
-    border-radius: 20px;
-    background-color: rgba(173, 255, 182, 0.316);
 }
 
 .swal2-popup {
@@ -539,7 +399,6 @@ button.swal2-confirm {
     outline: none;
     border: 4px solid #ffa500;
     border-radius: 20px;
-
 }
 
 .inactive {
