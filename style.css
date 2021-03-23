@@ -17,12 +17,14 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
 .gameWindow {
     width: 1080px;
     height: 720px;
     border: 5px solid #ffa500;
     border-radius: 25px;
 }
+
 .startScreen {
     display: flex;
     flex-direction: column;
@@ -54,10 +56,11 @@ button:active {
 
 #startButton {
     background-color: rgba(173, 255, 182, 0.316);
-    font-family: freude,sans-serif;
+    font-family: freude, sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 18px;color: #005AFF;
+    font-size: 18px;
+    color: #005AFF;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -101,7 +104,7 @@ button:active {
     height: 83px;
     margin-top: 100px;
     margin-left: 360px;
-    background-image:url(assets/images/hippo.png);
+    background-image: url(assets/images/hippo.png);
     background-repeat: no-repeat;
     background-size: 70%;
 }
@@ -122,7 +125,7 @@ button:active {
     height: 80px;
     margin-top: -160px;
     margin-left: 940px;
-    background-image:url(assets/images/cat.png);
+    background-image: url(assets/images/cat.png);
     background-repeat: no-repeat;
     background-size: 70%;
 }
@@ -143,7 +146,7 @@ button:active {
     height: 80px;
     margin-left: 37px;
     margin-top: 57px;
-    background-image:url(assets/images/rocky.png);
+    background-image: url(assets/images/rocky.png);
     background-repeat: no-repeat;
     background-size: 70%;
 }
@@ -164,7 +167,7 @@ button:active {
     height: 85px;
     margin-top: -220px;
     margin-left: 680px;
-    background-image:url(assets/images/bear.png);
+    background-image: url(assets/images/bear.png);
     background-repeat: no-repeat;
     background-size: 70%;
 }
@@ -185,7 +188,7 @@ button:active {
     height: 80px;
     margin-top: 400px;
     margin-left: 690px;
-    background-image:url(assets/images/pig.png);
+    background-image: url(assets/images/pig.png);
     background-repeat: no-repeat;
     background-size: 70%;
 }
@@ -201,7 +204,7 @@ button:active {
 }
 
 p {
-    
+
     width: auto;
     font-family: freude, sans-serif;
     font-weight: 300;
@@ -228,7 +231,7 @@ p {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height:100%;
+    height: 100%;
     background-image: url(assets/images/littleBackground.jpg);
     background-repeat: no-repeat;
     border-radius: 25px;
@@ -312,7 +315,7 @@ p {
 
 .answer {
     background-color: rgba(173, 255, 182, 0.316);
-    font-family: freude,sans-serif;
+    font-family: freude, sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 18px;
@@ -360,7 +363,7 @@ p {
     background-image: url(assets/images/blurredBackground.jpg) !important;
     border: 5px solid orange !important;
     border-radius: 25px !important;
-    font-family: freude,sans-serif !important;
+    font-family: freude, sans-serif !important;
     color: #005AFF !important;
     font-weight: 400;
 }
@@ -373,7 +376,7 @@ button.swal2-confirm {
     border: 4px solid orange !important;
     border-radius: 20px !important;
     background-color: #adffb651 !important;
-    font-family: freude,sans-serif !important;
+    font-family: freude, sans-serif !important;
     color: #005AFF !important;
 }
 
@@ -381,19 +384,20 @@ button.swal2-confirm {
     padding-top: 20px;
     align-items: center;
 }
+
 .countTimer {
     display: flex;
     flex-direction: column;
     height: 50px;
     width: 100px;
     background-color: #adffb651;
-    font-family: freude,sans-serif;
+    font-family: freude, sans-serif;
     font-weight: 400;
     text-align: center;
     font-style: normal;
     color: #005AFF;
     font-size: 24px;
-    margin: 0; 
+    margin: 0;
     padding-top: 20px;
     stroke: black;
     outline: none;

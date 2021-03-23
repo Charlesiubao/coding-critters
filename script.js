@@ -29,7 +29,7 @@ const rightAnswer = document.querySelector(".rightAnswer")
 const wrongAnswer = document.querySelectorAll(".wrongAnswer")
 const clock = document.querySelector('.clock')
 
-//AudioStuff?
+//AudioStuff? - next improvement
 
 
 //NPC list
@@ -42,7 +42,8 @@ const pig = document.querySelector('#pig')
 
 let animals = [hippo, cat, rocky, bear, pig]
 
-//behavior after selecting NPC
+//behavior after selecting NPC (begining of each question)
+//and 'collection' of animal icon to be spliced
 const switchToQuiz1 = () => {
     startScreen.classList.add('inactive')
     mapScreen.classList.add('inactive')
@@ -143,7 +144,7 @@ quiz5Toggle.addEventListener('click', () => {
     switchToQuiz5()
 })
 
-//when correct or incorrect answer is picked
+//when correct or incorrect answer is picked (not win/lose)
 
 const nextStep = (answers, message, wrong, bye) => {
     for (let i = 0; i < answers.length; i++) {
@@ -173,8 +174,10 @@ const nextStep = (answers, message, wrong, bye) => {
 
 // mixture of google and problem solving
 
+//this is my timer and win lose statement
+
 const timer = () => {
-    let counter = 20;
+    let counter = 30;
     let interval = setInterval(function() {
         document.querySelector('.countTimer').innerHTML = counter
         counter--;
@@ -184,17 +187,15 @@ const timer = () => {
                 title: 'Uh-Oh! You ran out of time!',
                 confirmButtonText: 'Try Again!', //got help from @jennster from twitter
             }).then(function() {
-                    location.reload();
-                }       
-            )
+                location.reload();
+            })
         } else if (counter > 0 && animals.length === 0) {
             Swal.fire({
                 title: 'Good Job!',
                 confirmButtonText: 'Play Again!', //got help from @jennster from twitter
             }).then(function() {
-                    location.reload();
-                }      
-            )
+                location.reload();
+            })
             clearInterval(interval)
         }
     }, 1000)
