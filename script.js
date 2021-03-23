@@ -177,7 +177,7 @@ const nextStep = (answers, message, wrong, bye) => {
 //this is my timer and win lose statement
 
 const timer = () => {
-    let counter = 30;
+    let counter = 60;
     let interval = setInterval(function() {
         document.querySelector('.countTimer').innerHTML = counter
         counter--;
