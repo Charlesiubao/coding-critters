@@ -2,7 +2,7 @@
 
 ## What's it all about?
 
-    Coding is now considered a must have skill. If We believe that the children are our future,
+    Coding is now considered a must-have skill. If We believe that the children are our future,
     then this game is where to start.
 
     This is for Ronald, my little boy.
@@ -18,7 +18,7 @@
     and NPC that will then prompt a window where that NPC will provide
     a question from a pre-made array or API.
     Player can then pick the correct answer out of 4 choices provided,
-    by clicking, and event listener that will be a feature.
+    by clicking. an event listener that will be a feature.
     Both Player and NPC will have some kind point value assigned using class object
     function. Each NPC will allow one mistake, and if player gets the answer wrong the second time, the event with that NPC will restart.
 

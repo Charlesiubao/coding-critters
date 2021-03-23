@@ -1,113 +1,141 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Coding Critters</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Hanalei&family=Hanalei+Fill&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.typekit.net/kdr8lme.css">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Londrina+Solid:wght@300&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./style.css">
-    </head>
-        <body>
-            <div class="container">
-                <div class="gameWindow">
-                    <div class="startScreen">
-                        <h1 id="startScreenLogo"></h1>
-                        <button id="startButton" class="sound">Let's Begin!</button>
-                    </div>
-                    <div class="map inactive">
-                        <div id="hippo"></div>
-                        <div id="cat"></div>
-                        <div id="rocky"></div>
-                        <div id="bear"></div>
-                        <div id="pig"></div>
-                    </div>
-                    <div class="quizScreen1 inactive">
-                        <div class="dialogueBox">
-                            <p id="npcName">Mr Hippo asks:</p>
-                            <p id="dialogue">What kind of function activates inside another function? Is it    A.) callBack, B.) variable, C.) repository, D.) div </p>
-                        </div>
-                        <div class="npcIcon1"></div>
-                        <div class="host"></div>
-                        <div class="playerOptions">
-                            <div id="answer1" class="sound">A</div>
-                            <div id="answer2" class="sound">B</div>
-                            <div id="answer3" class="sound">C</div>
-                            <div id="answer4" class="sound">D</div>
-                        </div>
-                    </div>
-                    <div class="quizScreen2 inactive">
-                        <div class="dialogueBox">
-                            <p id="npcName">Miss Kitty</p>
-                            <p id="dialogue">Which of the following is the biggest heading?Is it A.) h1, B.) h2, C.) h3 D.) h4 </p>
-                        </div>
-                        <div class="npcIcon2"></div>
-                        <div class="host"></div>
-                        <div class="playerOptions">
-                            <div id="answer1" class="sound">A</div>
-                            <div id="answer2" class="sound">B</div>
-                            <div id="answer3" class="sound">C</div>
-                            <div id="answer4" class="sound">D</div>
-                        </div>
-                    </div>
-                    <div class="quizScreen3 inactive">
-                        <div class="dialogueBox">
-                            <p id="npcName">Rocky Racoon</p>
-                            <p id="dialogue">What type of programming case have we been using? Is it A.) camelCase, B.) snake_case, C.) PascalCase D.) TROLLCASE </p>
-                        </div>
-                        <div class="npcIcon3"></div>
-                        <div class="host"></div>
-                        <div class="playerOptions">
-                            <div id="answer1" class="sound">A</div>
-                            <div id="answer2" class="sound">B</div>
-                            <div id="answer3" class="sound">C</div>
-                            <div id="answer4" class="sound">D</div>
-                        </div>
-                    </div>
-                    <div class="quizScreen4 inactive">
-                        <div class="dialogueBox">
-                            <p id="npcName">Barry Bear</p>
-                            <p id="dialogue">What division element do we use in HTML? Is it A.) div B.) constructor C.) string D.) class
-                            </p>
-                        </div>
-                        <div class="npcIcon4"></div>
-                        <div class="host"></div>
-                        <div class="playerOptions">
-                            <div id="answer1" class="sound">A</div>
-                            <div id="answer2" class="sound">B</div>
-                            <div id="answer3" class="sound">C</div>
-                            <div id="answer4" class="sound">D</div>
-                        </div>
-                    </div>
-                    <div class="quizScreen5 inactive">
-                        <div class="dialogueBox">
-                            <p id="npcName">Piggy McPiggerson</p>
-                            <p id="dialogue">How do we make stuff do on clicky-click? Is it A.) Using an Event listener, B.) Prayers, C.) Staring at the monitor D.) COFFEE</p>
-                        </div>
-                        <div class="npcIcon5"></div>
-                        <div class="host"></div>
-                        <div class="playerOptions">
-                            <div id="answer1" class="sound">A</div>
-                            <div id="answer2" class="sound">B</div>
-                            <div id="answer3" class="sound">C</div>
-                            <div id="answer4" class="sound">D</div>
-                        </div>
-                    </div>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coding Critters</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei&family=Hanalei+Fill&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/kdr8lme.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Londrina+Solid:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <!-- <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+</head>
+
+<body>
+    <div class="clock inactive">
+        <div class="countTimer" id="countTimer"></div>
+    </div>
+    <div class="container">
+        
+        <div class="gameWindow">
+            <div class="startScreen">
+                <h1 id="startScreenLogo"></h1>
+                <button id="startButton">Let's Begin!</button>
+                <p>Click on all the animals and answer the questions before time runs out!</p>
+            </div>
+            <div class="map inactive">
+                <div id="hippo"></div>
+                <div id="cat"></div>
+                <div id="rocky"></div>
+                <div id="bear"></div>
+                <div id="pig"></div>
+            </div>
+            <div class="quizScreen1 inactive">
+                <div class="dialogueBox">
+                    <p id="npcName">Mr Hippo asks:</p>
+                    <p id="dialogue">What kind of function activates inside another function? Is it A.) div, B.)
+                        variable, C.) repository, D.) callBack </p>
                 </div>
-                <div class="toggle">
-                    <button id="retry">Retry</button>
-                    <button id="mapToggle">Map</button>
-                    <button id="soundToggle">Mute</button>
+                <div class="rightAnswer inactive"><p id="congrats">That's Correct!</p></div>
+                <div class="wrongAnswer inactive"><p id="nope">Try Again!</p></div>
+                <div class="npcIcon1"></div>
+                <div class="host"></div>
+                <div class="playerOptions">
+                    <div class="answer">A</div>
+                    <div class="answer">B</div>
+                    <div class="answer">C</div>
+                    <div class="answer correct">D</div>
                 </div>
             </div>
-            <script src="./script.js" async defer></script>
-        </body>
+            <div class="quizScreen2 inactive">
+                <div class="dialogueBox">
+                    <p id="npcName">Miss Kitty</p>
+                    <p id="dialogue">Which of the following is the biggest heading?Is it A.) h3, B.) h2, C.) h1 D.) h4
+                    </p>
+                </div>
+                <div class="rightAnswer inactive"><p id="congrats">That's Correct!</p></div>
+                <div class="wrongAnswer inactive"><p id="nope">Try Again!</p></div>
+                <div class="npcIcon2"></div>
+                <div class="host"></div>
+                <div class="playerOptions">
+                    <div class="answer">A</div>
+                    <div class="answer">B</div>
+                    <div class="answer correct">C</div>
+                    <div class="answer">D</div>
+                </div>
+            </div>
+            <div class="quizScreen3 inactive">
+                <div class="dialogueBox">
+                    <p id="npcName">Rocky Racoon</p>
+                    <p id="dialogue">What type of programming case have we been using? Is it A.) camelCase, B.)
+                        snake_case, C.) PascalCase D.) TROLLCASE </p>
+                </div>
+                <div class="rightAnswer inactive"><p id="congrats">That's Correct!</p></div>
+                <div class="wrongAnswer inactive"><p id="nope">Try Again!</p></div>
+                <div class="npcIcon3"></div>
+                <div class="host"></div>
+                <div class="playerOptions">
+                    <div class="answer correct">A</div>
+                    <div class="answer">B</div>
+                    <div class="answer">C</div>
+                    <div class="answer">D</div>
+                </div>
+            </div>
+            <div class="quizScreen4 inactive">
+                <div class="dialogueBox">
+                    <p id="npcName">Barry Bear</p>
+                    <p id="dialogue">What division element do we use in HTML? Is it A.) class  B.) constructor C.) string
+                        D.) div
+                    </p>
+                </div>
+                <div class="rightAnswer inactive"><p id="congrats">That's Correct!</p></div>
+                <div class="wrongAnswer inactive"><p id="nope">Try Again!</p></div>
+                <div class="npcIcon4"></div>
+                <div class="host"></div>
+                <div class="playerOptions">
+                    <div class="answer">A</div>
+                    <div class="answer">B</div>
+                    <div class="answer">C</div>
+                    <div class="answer correct">D</div>
+                </div>
+            </div>
+            <div class="quizScreen5 inactive">
+                <div class="dialogueBox">
+                    <p id="npcName">Piggy McPiggerson</p>
+                    <p id="dialogue">How do we make stuff do on clicky-click? Is it A.) Using an Event listener, B.)
+                        Prayers, C.) Staring at the monitor D.) COFFEE</p>
+                </div>
+                <div class="rightAnswer inactive"><p id="congrats">That's Correct!</p></div>
+                <div class="wrongAnswer inactive"><p id="nope">Try Again!</p></div>
+                <div class="npcIcon5"></div>
+                <div class="host"></div>
+                <div class="playerOptions">
+                    <div class="answer correct">A</div>
+                    <div class="answer">B</div>
+                    <div class="answer">C</div>
+                    <div class="answer correct">D</div>
+                </div>
+            </div>
+        </div>
+        <div class="toggle">
+            <button id="retry">Retry</button>
+            <button id="mapToggle">Map</button>
+            <!-- <button id="soundToggle">Mute</button> -->
+        </div>
+        
+    </div>
+    </div>
+    <script src="./script.js" async defer></script>
+</body>
+
 </html>
