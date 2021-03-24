@@ -16,25 +16,18 @@
 
     The game will feature some type of map where the player can click around icons
     and NPC that will then prompt a window where that NPC will provide
-    a question from a pre-made array or API.
-    Player can then pick the correct answer out of 4 choices provided,
-    by clicking. an event listener that will be a feature.
-    Both Player and NPC will have some kind point value assigned using class object
-    function. Each NPC will allow one mistake, and if player gets the answer wrong the second time, the event with that NPC will restart.
+    a question hard coded into the character.
+    Player can then pick the correct answer out of 4 choices provided.
+    The correct answer is hard coded in the choices.
 
 ### What I used to make this game and intended features:
 
     I will use HTML, CSS and JavaScript
     I will use DOM manipulation to move about the map, instead of an anchor tag that will take me
     to a completely new page. The addition of event listeners within the game and the page will be
-    a feature as well. I intend to add a mute button for quiet playtime.
-    Each NPC can have some represented value that every correct answer a player gets
-    will make the NPC's represented value, drop. I will achieve this by using class objects.
-    Similarly, the player will have some representative value that will decrease when providing wrong answers.
-
-    <!-- insert code here--!>
-
-    <!-- insert sources here--!>
+    a feature as well. I intend to add a mute button for quiet playtime, at least in the future.
+    To win, I will add a timer.
+    If the player gets all the right answers before time runs out, they win. if not, they get to try again.
 
 ### Insert WireFrames Here:
 
